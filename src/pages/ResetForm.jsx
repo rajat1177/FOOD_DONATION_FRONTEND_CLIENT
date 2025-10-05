@@ -1,6 +1,6 @@
 // import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { InputBox } from "../components/inputBox";
+import { InputBox } from "../components/InputBox";
 import { Button } from "../components/Button";
 import axios from "axios";
 import { Loading } from "../components/Loading"

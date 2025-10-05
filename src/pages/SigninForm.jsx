@@ -1,7 +1,7 @@
 import { BottomWarning } from "../components/BottomWarning"
 import { Button } from "../components/Button"
 import { Heading } from "../components/Heading"
-import { InputBox } from "../components/inputBox"
+import { InputBox } from "../components/InputBox"
 import { SubHeading } from "../components/SubHeading"
 import { useState,useEffect } from "react"
 import { useNavigate } from "react-router-dom";

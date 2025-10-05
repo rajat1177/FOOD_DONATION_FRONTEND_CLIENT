@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { InputBox } from "../components/inputBox";
+import { InputBox } from "../components/InputBox";
 import { Button } from "../components/Button";
 import { Loading } from "../components/Loading";
 

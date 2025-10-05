@@ -2,7 +2,7 @@ import { Heading } from "../components/Heading";
 import { SubHeading } from "../components/SubHeading";
 import { Button } from "../components/Button";
 import { BottomWarning } from "../components/BottomWarning";
-import { InputBox } from "../components/inputBox";
+import { InputBox } from "../components/InputBox";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
