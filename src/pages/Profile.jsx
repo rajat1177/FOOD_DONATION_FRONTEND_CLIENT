@@ -20,10 +20,10 @@ export default function ProfilePage() {
     const fetchData = async () => {
       try {
         const [userResponse, donationResponse] = await Promise.all([
-          axios.get('https://food-donation-backend-xi.vercel.app/api/user/profile', {
+          axios.get('http://56.228.24.94/api/user/profile', {
             withCredentials: true,
           }),
-          axios.get('https://food-donation-backend-xi.vercel.app/api/user/donate/donations', {
+          axios.get('http://56.228.24.94/api/user/donate/donations', {
             withCredentials: true,
           }),
         ]);

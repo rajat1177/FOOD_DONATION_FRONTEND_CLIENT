@@ -22,7 +22,7 @@ export function NestedMenu({ title, m1, m3, mn1, mn2, mn3, m4, m5 }) {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post("https://food-donation-backend-xi.vercel.app/api/user/logout", {}, { withCredentials: true });
+      const response = await axios.post("http://56.228.24.94/api/user/logout", {}, { withCredentials: true });
       if (response.status === 200) {
         navigate("/");
         location.reload();

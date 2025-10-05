@@ -15,7 +15,7 @@ const Navbar = () => {
     const fetchUserProfile = async () => {
       
       try {
-        const res = await axios.get("https://food-donation-backend-xi.vercel.app/api/user/profile", { withCredentials: true });
+        const res = await axios.get("http://56.228.24.94/api/user/profile", { withCredentials: true });
         setUser(res.data);
         // console.log(res.data);
         

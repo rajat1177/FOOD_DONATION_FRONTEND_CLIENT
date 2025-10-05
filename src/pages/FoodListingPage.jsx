@@ -25,14 +25,14 @@ const FoodListingPage = () => {
     // Fetch data from the API:
     const fetchFoodListings = async () => {
       try {
-        const response = await axios.get('https://food-donation-backend-xi.vercel.app/api/listings/FoodListings', { withCredentials: true });
+        const response = await axios.get('http://56.228.24.94/api/listings/FoodListings', { withCredentials: true });
         const data = response.data;
         
         if (response.status !== 200) {
           throw new Error(`Error: ${response.statusText}`);
         }
         
-        const res = await axios.get("https://food-donation-backend-xi.vercel.app/api/user/profile", { withCredentials: true });
+        const res = await axios.get("http://56.228.24.94/api/user/profile", { withCredentials: true });
         setUser(res.data);
 
         // Filter out food items posted by the current user

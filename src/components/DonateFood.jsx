@@ -55,7 +55,7 @@ export const DonateFood = ({ setIsModalOpen }) => {
 
         try {
             const response = await axios.post(
-                "https://food-donation-backend-xi.vercel.app/api/listings/Create-FoodListings",
+                "http://56.228.24.94/api/listings/Create-FoodListings",
                 form,
                 { withCredentials: true }
             );
@@ -70,7 +70,7 @@ export const DonateFood = ({ setIsModalOpen }) => {
                 locationAddress: formData.locationAddress,
             };
 
-            await axios.post("https://food-donation-backend-xi.vercel.app/api/listings/send-donation-email", emailPayload, {
+            await axios.post("http://56.228.24.94/api/listings/send-donation-email", emailPayload, {
                 withCredentials: true,
             });
 

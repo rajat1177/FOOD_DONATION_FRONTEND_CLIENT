@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { InputBox } from "../components/inputBox";
+import { InputBox } from "../components/InputBox";
 import { Button } from "../components/Button";
 import { Loading } from "../components/Loading"
 
@@ -26,7 +26,7 @@ export const VerificationForm = () => {
 
         try {
             const response = await axios.post(
-                `https://food-donation-backend-xi.vercel.app/api/user/verify-otp?email=${email}`,
+                `http://56.228.24.94/api/user/verify-otp?email=${email}`,
                 { enteredOtp: numberOtp },
                 { withCredentials: true } //for sending cookies
             );

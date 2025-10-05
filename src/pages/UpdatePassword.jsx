@@ -25,7 +25,7 @@ const UpdatePassword = () => {
 
     try {
       const response = await axios.put(
-        'https://food-donation-backend-xi.vercel.app/api/user/update-password', // Your backend endpoint
+        'http://56.228.24.94/api/user/update-password', // Your backend endpoint
         {
           oldPassword,
           newPassword,

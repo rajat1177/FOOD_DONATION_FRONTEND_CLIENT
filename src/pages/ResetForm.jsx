@@ -20,7 +20,7 @@ export const ResetForm = () => {
         }
         try {
             setLoading(true)
-            const response = await axios.post('https://food-donation-backend-xi.vercel.app/api/user/reset-verification',
+            const response = await axios.post('http://56.228.24.94/api/user/reset-verification',
                 { email: email });
             if (response.status === 200) {
                 navigate(`/reset-password-verification?email=${email}`);

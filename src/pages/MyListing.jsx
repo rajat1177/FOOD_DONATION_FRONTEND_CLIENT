@@ -22,7 +22,7 @@ export const MyListing = () => {
     const fetchListings = async () => {
       try {
         const response = await axios.get(
-          "https://food-donation-backend-xi.vercel.app/api/listings/user-FoodListings",
+          "http://56.228.24.94/api/listings/user-FoodListings",
           { withCredentials: true }
         );
         setFoodItems(response.data.listings);
@@ -45,7 +45,7 @@ export const MyListing = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this listing?")) {
       try {
-        const response = await axios.delete(`https://food-donation-backend-xi.vercel.app/api/listings/FoodListings/${id}`, { withCredentials: true });
+        const response = await axios.delete(`http://56.228.24.94/api/listings/FoodListings/${id}`, { withCredentials: true });
         console.log(response);
         if(response.status !== 200){
             setError("Error Deleting")

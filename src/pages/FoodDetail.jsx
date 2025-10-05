@@ -22,7 +22,7 @@ const FoodDetail = () => {
   useEffect(() => {
     const fetchFoodItem = async () => {
       try {
-        const response = await axios.get(`https://food-donation-backend-xi.vercel.app/api/listings/FoodListings/${id}`, { withCredentials: true });
+        const response = await axios.get(`http://56.228.24.94/api/listings/FoodListings/${id}`, { withCredentials: true });
         const data = response.data;
         const user = data.user;
         const rating = user.rating;
@@ -55,7 +55,7 @@ const FoodDetail = () => {
   useEffect(() => {
     const getDonate = async () => {
       try {
-        const res = await axios.get(`https://food-donation-backend-xi.vercel.app/api/user/donate/donations/${id}`, { withCredentials: true });
+        const res = await axios.get(`http://56.228.24.94/api/user/donate/donations/${id}`, { withCredentials: true });
         const data = res.data;
         if (res.status === 200) {
           setDonate(data.donation[0].status);
@@ -83,7 +83,7 @@ const FoodDetail = () => {
       };
 
       const response = await axios.post(
-        'https://food-donation-backend-xi.vercel.app/api/user/donate/donations',
+        'http://56.228.24.94/api/user/donate/donations',
         requestBody,
         { withCredentials: true }
       );

@@ -11,7 +11,7 @@ const ProfileUpdate = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('https://food-donation-backend-xi.vercel.app/api/user/profile', {
+        const response = await axios.get('http://56.228.24.94/api/user/profile', {
           withCredentials: true,
         });
         setUser(response.data);
@@ -52,7 +52,7 @@ const ProfileUpdate = () => {
       try {
         // console.log(formData);
         
-        const response = await axios.put('https://food-donation-backend-xi.vercel.app/api/user/profile', formData, {
+        const response = await axios.put('http://56.228.24.94/api/user/profile', formData, {
           withCredentials: true,
           headers: {
             'Content-Type': 'multipart/form-data',

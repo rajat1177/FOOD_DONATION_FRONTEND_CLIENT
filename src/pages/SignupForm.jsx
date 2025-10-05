@@ -54,7 +54,7 @@ export const Signup = () => {
                             if (role.length === 0){
                                 setRole("individual")
                             }
-                            const response = await axios.post("https://food-donation-backend-xi.vercel.app/api/user/register", {
+                            const response = await axios.post("http://56.228.24.94/api/user/register", {
                                 name,
                                 email,
                                 password,

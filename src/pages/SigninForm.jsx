@@ -20,7 +20,7 @@ export const Signin = () => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const res = await axios.get("https://food-donation-backend-xi.vercel.app/api/user/profile", { withCredentials: true });
+                const res = await axios.get("http://56.228.24.94/api/user/profile", { withCredentials: true });
                 setUser(res.data);
                 
                 if (res.data) {
@@ -79,7 +79,7 @@ export const Signin = () => {
 
                                 try {
                                     const response = await axios.post(
-                                        "https://food-donation-backend-xi.vercel.app/api/user/login",
+                                        "http://56.228.24.94/api/user/login",
                                         { email, password }, // Request body
                                         { withCredentials: true } // Axios configuration
                                       );

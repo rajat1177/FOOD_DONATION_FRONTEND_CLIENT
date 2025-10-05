@@ -8,7 +8,7 @@ export function Search({ setLists }) {
   useEffect(() => {
     const fetchLists = async () => {
       try {
-        const response = await axios.get("https://food-donation-backend-xi.vercel.app/api/listings/FoodSearched-Listings", { withCredentials: true });
+        const response = await axios.get("http://56.228.24.94/api/listings/FoodSearched-Listings", { withCredentials: true });
         setOriginalLists(response.data.list); // Save the full list in originalLists
         setLists(response.data.list); // Set the full list initially
       } catch (err) {
@@ -22,7 +22,7 @@ export function Search({ setLists }) {
     const searchedLists = async () => {
       if (filter) {
         try {
-          const response = await axios.get(`https://food-donation-backend-xi.vercel.app/api/listings/FoodSearched-Listings/${filter}`, { withCredentials: true });
+          const response = await axios.get(`http://56.228.24.94/api/listings/FoodSearched-Listings/${filter}`, { withCredentials: true });
           const filteredLists = response.data.list;
           setLists(filteredLists);
         } catch (err) {

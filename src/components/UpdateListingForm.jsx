@@ -21,7 +21,7 @@ export const UpdateListingForm = () => {
     const fetchListing = async () => {
       try {
         const response = await axios.get(
-          `https://food-donation-backend-xi.vercel.app/api/listings/FoodListings/${id}`,
+          `http://56.228.24.94/api/listings/FoodListings/${id}`,
           { withCredentials: true }
         );
         const { title, description, quantity, expirationDate } = response.data;
@@ -66,7 +66,7 @@ export const UpdateListingForm = () => {
       
   
       await axios.put(
-        `https://food-donation-backend-xi.vercel.app/api/listings/FoodListings/${id}`,
+        `http://56.228.24.94/api/listings/FoodListings/${id}`,
         formDataToSend,
         { withCredentials: true }
       );

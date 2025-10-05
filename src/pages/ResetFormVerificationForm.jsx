@@ -40,7 +40,7 @@ export const ResetFormVerification = () => {
 
     try {
       const response = await axios.put(
-        `https://food-donation-backend-xi.vercel.app/api/user/reset-password?email=${email}`,
+        `http://56.228.24.94/api/user/reset-password?email=${email}`,
         { enteredOtp: numberOtp, newPassword: password },{withCredentials: true}
       );
 
@@ -63,7 +63,7 @@ export const ResetFormVerification = () => {
 
     try {
       // Resend OTP using the same endpoint for both generating and resending OTP
-      await axios.post("https://food-donation-backend-xi.vercel.app/api/user/reset-verification", { email }, {withCredentials: true});
+      await axios.post("http://56.228.24.94/api/user/reset-verification", { email }, {withCredentials: true});
       alert("A new OTP has been sent to your email.");
     } catch (err) {
       setError(err.response?.data?.message || "Failed to resend OTP. Please try again.");

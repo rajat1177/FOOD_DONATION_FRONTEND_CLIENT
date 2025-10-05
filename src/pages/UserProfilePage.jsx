@@ -12,7 +12,7 @@ const UserProfilePage = () => {
     const fetchUserProfile = async () => {
       try {
         const response = await axios.get(
-          `https://food-donation-backend-xi.vercel.app/api/users/${userId}`
+          `http://56.228.24.94/api/users/${userId}`
         );
 
         if (response.status !== 200) {
